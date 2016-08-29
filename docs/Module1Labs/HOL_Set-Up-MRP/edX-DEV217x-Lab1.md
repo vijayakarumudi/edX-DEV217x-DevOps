@@ -6,7 +6,7 @@ In this lab, we will set up the PartsUnlimited MRP VSTS team project as a pre-re
 ###Pre-requisites:###
 
 -   An active Visual Studio Team Services (VSTS) account
-	> **Note:** You will need an active Visual Studio Team Services (VSTS) account already, or you will need to sign up for a free Visual Studio Team Services account by following [this link.](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/sign-up-for-visual-studio-team-services) Alternatively, you can follow the steps in _Create a Visual Studio Team Services (VSTS) Account_ in Lab 1 of the **DEV212x: Intro to DevOps** course found [here](https://github.com/MicrosoftLearning/edX-DEV212x-Intro-to-DevOps/blob/master/docs/Lab1/edX-DEV212x-Lab1.md). 
+	> You will need an active Visual Studio Team Services (VSTS) account already, or you will need to sign up for a free Visual Studio Team Services account by following [this link.](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/sign-up-for-visual-studio-team-services) Alternatively, you can follow the steps in _Create a Visual Studio Team Services (VSTS) Account_ in Lab 1 of the **DEV212x: Intro to DevOps** course found [here](https://github.com/MicrosoftLearning/edX-DEV212x-Intro-to-DevOps/blob/master/docs/Lab1/edX-DEV212x-Lab1.md). 
 
 -   Project Collection Administrator rights to the Visual Studio Team Services account
 	> If you are not a Project Collection Administrator for the Visual Studio Team Services account, follow the instructions at [this link.](https://www.visualstudio.com/en-us/docs/setup-admin/add-administrator-tfs#project-collection). Alternatively, you can follow the steps above to create a new VSTS account. You will, by default, be an administrator of your own account.
@@ -43,10 +43,10 @@ order to use Team Build for the Continuous Integration HOL.
 **5.** Now that we have the URL for the VSTS repo, we need to authenticate access to the Visual Studio Team Services personal access token. Follow the steps in this [link](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/use-personal-access-tokens-to-authenticate) 
  to create a personal access token (PAT). A PAT is a secure mechanism for controlling access to your VSTS account. (Alternatively, you can also authenticate using your using your username and password.)
 
-> **NOTE:** This Personal Access Token (PAT) will be used when interacting with the git repository from the
+> This Personal Access Token (PAT) will be used when interacting with the git repository from the
 command line. Make sure you copy the token now. Visual Studio Team Services does not store it and you won't be able to see it again. 
 
-> **NOTE:** It is strongly recommended to install the [Git Credential Manager for Mac or Linux](https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux) or [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) to simplify authentication when using Git.  
+> It is strongly recommended to install the [Git Credential Manager for Mac or Linux](https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux) or [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) to simplify authentication when using Git.  
 
 **6.** Clone the **PartsUnlimitedMRP** git repository located in GitHub onto your local machine:
 
@@ -65,7 +65,7 @@ your Visual Studio Team Services account. While pushing, use any username withou
 	
 ![](<media/push_to_vsts.png>)
 
-**NOTE:** We added the Visual Studio Team Services repository as a remote named **vsts**, so we need to
+> We added the Visual Studio Team Services repository as a remote named **vsts**, so we need to
 push to that remote in the future for our changes to appear in our Visual Studio Team Services
 repository.
 
