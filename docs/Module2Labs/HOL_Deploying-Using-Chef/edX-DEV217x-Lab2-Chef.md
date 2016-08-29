@@ -4,7 +4,9 @@ In this hands-on lab, you will explore some of the new features and capabilities
 
 ###Pre-requisites###
 
-Active Azure Subscription
+- Active Azure Subscription
+	> If you do not have an active Azure subscription, you can sign up by following the instructions in _Create a Free Azure Trial Account_ in Lab 1 of the **DEV212x: Intro to DevOps** course found 
+	[here](https://github.com/MicrosoftLearning/edX-DEV212x-Intro-to-DevOps/blob/master/docs/Lab1/edX-DEV212x-Lab1.md#create-a-free-azure-trial-account). 
 
 ###Tasks Overview###
 
