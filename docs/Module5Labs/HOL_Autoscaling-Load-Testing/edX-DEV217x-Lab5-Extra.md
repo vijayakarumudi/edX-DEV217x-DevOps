@@ -1,23 +1,23 @@
-#HOL - Auto-Scaling and Load Testing
+# HOL - Auto-Scaling and Load Testing
 
 Your Linux Azure virtual machine has suffered significant performance degradation during Black Friday. The business unit responsible for the website’s functionality has complained to IT staff that users would intermittently lose access to the website, and that load times were significant for those who could access it.
 
 In this lab, you will learn how to perform load testing against an endpoint for the PartsUnlimitedMRP Linux Azure virtual machine. Additionally, you will create a virtual machine and availability set using Azure Command Line tools, as well as add both to a shared availability set to configure auto-scaling the set in cloud services. 
 
-**Pre-requisites**
+### Pre-requisites
 
 - The PartsUnlimitedMRP Linux Azure virtual machine set up and deployed with endpoint 9080 open (see [link](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/blob/master/docs/Build-MRP-App-Linux.md))
 
 - Visual Studio Enterprise license
 
-**Tasks**
+### Tasks Overview
 
 1. Setting up and running a load test in Visual Studio Team Services
 2. Creating virtual machines with Azure CLI
 3. Configuring with availability groups in Azure Management Portal
 4. Running a load test to verify auto-scaling
 
-###Task 1: Setting up and running a load test in Visual Studio Team Services
+## Task 1: Setting up and running a load test in Visual Studio Team Services
 
 Performing a load test can be done in Visual Studio, in a browser in Visual Studio Team Services, or in the new Azure Portal. For simplicity, we will run a load test in a browser in Visual Studio Team Services. 
 
@@ -48,7 +48,7 @@ On the upper-left set of tabs, click on "Load test" to open up load test options
 **Step 5.** When the test has finished loading, it will show metrics, errors, and application performance. We should be able to solve this issue by creating an availability set for the virtual machines and configuring auto-scaling.
 ![](<media/view_test_results.png>)
 
-###Task 2: Creating virtual machines with Azure CLI
+## Task 2: Creating virtual machines with Azure CLI
 Before configuring auto-scaling, we need to create a virtual machine and add it to an availability set. We can use Azure Command Line tools on our Linux machine to create a virtual machine and availability set. 
 
 **1.** Ensure that the PartsUnlimitedMRP machine is running. SSH into the machine with your credentials. 
@@ -133,7 +133,7 @@ It may take a few minutes for the virtual machine to be created.
 
 ![](<media/scale_cloud_service_portal.png>)
 
-###Task 3: Running a load test to verify auto-scaling
+## Task 3: Running a load test to verify auto-scaling
 
 We now have two virtual machines in an availability set that scales by CPU so that whenever the CPU percentage for PartsUnlimitedMRP is over the threshold of 80%, Azure will automatically add an instance to the virtual machine. We can now run a load test again to compare the results. 
 

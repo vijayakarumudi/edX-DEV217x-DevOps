@@ -3,7 +3,7 @@ HOL 0 - Set up Parts Unlimited MRP
 
 In this lab, we will set up the PartsUnlimited MRP VSTS team project as a pre-requisite for the Continuous Integration lab. 
 
-###Pre-requisites:###
+### Pre-requisites
 
 -   An active Visual Studio Team Services (VSTS) account
 	> You will need an active Visual Studio Team Services (VSTS) account already, or you will need to sign up for a free Visual Studio Team Services account by following [this link.](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/sign-up-for-visual-studio-team-services) Alternatively, you can follow the steps in _Create a Visual Studio Team Services (VSTS) Account_ in Lab 1 of the **DEV212x: Intro to DevOps** course found [here](https://github.com/MicrosoftLearning/edX-DEV212x-Intro-to-DevOps/blob/master/docs/Lab1/edX-DEV212x-Lab1.md). 
@@ -15,11 +15,11 @@ In this lab, we will set up the PartsUnlimited MRP VSTS team project as a pre-re
 	> If you are running Linux on your local workstation, install git with "sudo apt-get install git". 
 	If you are running Windows, you can install the git client from [http://git-scm.com/download](http://git-scm.com/download).
 	
-### Tasks Overview: ###
+### Tasks Overview
 
 **Set up your Visual Studio Team Services account:** This step helps you download the source code, and then push it to your own Visual Studio Team Services account.
 
-### 1: Configure your Visual Studio Team Services account
+## Task 1: Configure your Visual Studio Team Services account
 
 We want to push the application code to your Visual Studio Team Services account in
 order to use Team Build for the Continuous Integration HOL.

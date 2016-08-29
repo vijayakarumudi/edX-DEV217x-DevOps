@@ -2,22 +2,22 @@
 
 In this lab, you will learn how to create new JUnit tests to the Parts Unlimited MRP App using the Eclipse IDE, and then get them to run in an automated build in Visual Studio Team Services. After finishing this lab, you will have added unit tests to the Parts Unlimited MRP App and have those tests running during build time.
 
-###Pre-requisites###
+### Pre-requisites
 
 - An active Visual Studio Team Services account
 - Eclipse ([http://www.eclipse.org/](http://www.eclipse.org/ "http://www.eclipse.org/"))
 - Completion of the [Continuous Integration HOL](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module4Labs/HOL_Continuous-Integration)
 
 
-###Tasks Overview###
+### Tasks Overview
 
-**Set up the development environment:** This step will get your local environment set up to work on the Parts Unlimited MRP App. 
+- **Set up the development environment:** This step will get your local environment set up to work on the Parts Unlimited MRP App. 
 
-**Add JUnit tests to the Parts Unlimited MRP App:** In this step, you will add automated unit tests to the Parts Unlimited MRP App and run them locally.
+- **Add JUnit tests to the Parts Unlimited MRP App:** In this step, you will add automated unit tests to the Parts Unlimited MRP App and run them locally.
 
-**Run the automated tests in an automated build:** In this step, you will run the JUnit tests as part of the Continuous Integration Build that was set up in the  Continuous Integration HOL with Parts Unlimited MRP.
+- **Run the automated tests in an automated build:** In this step, you will run the JUnit tests as part of the Continuous Integration Build that was set up in the  Continuous Integration HOL with Parts Unlimited MRP.
 
-###1. Set up the development environment###
+## Task 1. Set up the development environment
 
 First, we need to set up Eclipse in order to work on the Parts Unlimited MRP App on our local machine. The Parts Unlimited MRP App uses [Gradle](https://gradle.org/), so we need to set up the code as Gradle projects in Eclipse.
 
@@ -115,7 +115,7 @@ The development environment is now set up, and you should be ready to make write
 
 ![](media/gradle_build_console.png)
 
-###2. Add JUnit tests to Parts Unlimited MRP App###
+## Task 2. Add JUnit tests to Parts Unlimited MRP App###
 
 This task will focus on creating a unit test to test a part of the Parts Unlimited App.
 
@@ -171,7 +171,7 @@ The final result should look something like this:
 
 You should now be able to see that the test in the JUnit Window.
 
-### 3. Run the automated tests in an automated build###
+## Task 3. Run the automated tests in an automated build
 
 Now that we have the automated tests written, and successfully running, it's important we push the new tests to the shared repository. This will allow other team members to benefit from the automated test and give the automated build more verification that our code is working as expected.
 

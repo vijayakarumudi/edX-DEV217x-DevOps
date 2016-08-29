@@ -9,19 +9,19 @@ get fast feedback. To do so, we are going to be creating a build definition that
 will allow us to compile and run unit tests on our code every time a commit is
 pushed to Visual Studio Team Services.
 
-###Pre-requisites:###
+### Pre-requisites
 
 -   Completion of the "Set up Parts Unlimited MRP" lab
 
 -   Project Administrator rights to the Visual Studio Team Services account
 
-### Tasks Overview: ###
+### Tasks Overview
 
 **Create a Continuous Integration Build:** In this step, you will create a build definition in Visual Studio Team Services that will be triggered every time a commit is pushed to your repository in Visual Studio Team Services. 
  
-### 1. Create a Continuous Integration Build
+## Task 1. Create a Continuous Integration Build
 
->NOTE: Ensure that you have an existing PartsUnlimitedMRP team project that also contains the Git repository cloned from GitHub. If not, complete the "Set up Parts Unlimited MRP" lab before going through this lab. 
+>Ensure that you have an existing PartsUnlimitedMRP team project that also contains the Git repository cloned from GitHub. If not, complete the "Set up Parts Unlimited MRP" lab before going through this lab. 
 
 >In this lab, we will be using the Hosted agent located in Visual Studio Team Services. If you would like to use an on-premises cross-platform agent (Azure subscription needed), you can follow instructions for setting an agent up [with this link](https://github.com/Microsoft/vsts-agent/blob/master/README.md). 
 
@@ -107,12 +107,12 @@ Expand the **Advanced** section, and set the **Working Directory** to the follow
 
 **11.** Select the second Publish Build Artifacts task, and fill in the input values with the following:
 
-	Copy Root: $(Build.SourcesDirectory)
-    Contents: **/deploy/SSH-MRP-Artifacts.ps1
-			  **/deploy/deploy_mrp_app.sh
-              **/deploy/MongoRecords.js
-    Artifact Name: deploy
-    Artifact Type: Server
+	Copy Root:	$(Build.SourcesDirectory)
+    Contents:	**/deploy/SSH-MRP-Artifacts.ps1
+			**/deploy/deploy_mrp_app.sh
+    		**/deploy/MongoRecords.js
+    Artifact Name: 	deploy
+    Artifact Type: 	Server
 
 ![](<media/second_copy_publish.png>)
 

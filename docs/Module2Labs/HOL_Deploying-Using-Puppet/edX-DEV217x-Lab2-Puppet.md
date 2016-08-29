@@ -3,11 +3,11 @@ In this hands-on lab, you will deploy a Java app, the Parts Unlimited MRP App, u
 management system that allows you to automate provisioning and configuration of machines by describing the state of your infrastructure
 as code. Infrastructure as Code is an important pillar of good DevOps.
 
-## Prerequisites
+### Prerequisites
 - An SSH client such as PuTTY
 - An Azure subscription
 
-## Tasks
+### Tasks Overview
 
 In this lab you will work with two machines: a Puppet Master machine and another machine known as a _node_
 which will host the MRP application. The only task you will perform on the node is to install the Puppet
@@ -71,7 +71,7 @@ though _puppet programs_ on the Puppet Master.
 
     ![](<media/4.jpg>)
 
-    >**Note:** The lab requires several ports to be open, such as the Puppet Server port, the Puppet console port, SSH
+    >The lab requires several ports to be open, such as the Puppet Server port, the Puppet console port, SSH
     ports and the Parts Unlimited MRP app port on the partsmrp machine. The ARM template opens these ports on the
     machines for you.
 
@@ -120,7 +120,7 @@ the node.
 
     ![](<media/13.jpg>)
 
-    >**Note:** It is possible to automate the install and configuration of the Puppet agent onto an Azure VM using the
+    >It is possible to automate the install and configuration of the Puppet agent onto an Azure VM using the
     [Puppet Agent extension](https://github.com/Azure/azure-quickstart-templates/tree/master/puppet-agent-windows) from the 
     Azure Marketplace.
 
@@ -168,7 +168,7 @@ in `/etc/puppetlabs/code/environments/production`.
 
     ![](<media/14.jpg>)
 
-    >**Note:** The `mongodb` and `tomcat` modules are supported modules from the Forge. The `wget` module is
+    >The `mongodb` and `tomcat` modules are supported modules from the Forge. The `wget` module is
     a user module and so is not officially supported.
 
 1. Create a Custom Module
@@ -240,7 +240,7 @@ flesh out the rest of the module properly.
 
     Press `cntrl-X`, then `y` then `enter` to save the changes to the file.
 
-    >**Note:** Classes in Puppet programs are not like classes in Object Oriented Programming. They simply define
+    >Classes in Puppet programs are not like classes in Object Oriented Programming. They simply define
     a "resource" that is conifgured on a node. In the `mrpapp` class (or resource), we have just instructed 
     Puppet to ensure that a file exists at the path `/tmp/dummy.txt` that has the content "Puppet rules!". We 
     will define more advanced resources within the `mrpapp` class as we progress.
@@ -293,11 +293,11 @@ flesh out the rest of the module properly.
 Now that we have hooked up the node (partsmrp) to the Puppet Master, we can begin to write the Puppet Program
 that will describe the prerequisites for the Parts Unlimited MRP application.
 
->**Note:** For simplicity, we will describe the entire configuration in a single Puppet Program (init.pp from 
+>For simplicity, we will describe the entire configuration in a single Puppet Program (init.pp from 
 the mrpapp module we created earlier). However, the parts of the configuration could be split into multiple 
 manifests or modules as they grow. This would promote reuse - just as in any good programming language.
 
->**Note:** You can see the complete `init.pp` file [here](final/init.pp).
+>You can see the complete `init.pp` file [here](final/init.pp).
 
 ### 6.1 Configure MongoDb ###
 
@@ -349,7 +349,7 @@ Believe it or not, that's all we have to do to install mondodb!
 create a tmp file once we have inserted the records (Line 15). If this file exists, we don't execute the
 command again.
 
->**Note**: The `->` notation on Lines 3, 9 and 14 is an "ordering arrow": it tells Puppet that it must apply the
+>The `->` notation on Lines 3, 9 and 14 is an "ordering arrow": it tells Puppet that it must apply the
 "left" resource before invoking the "right" resource. This allows us to specify order when necessary.
 
 Press `cntrl-O`, then `enter` to save the changes to the file without exiting.
@@ -377,7 +377,7 @@ Let's examine this class:
 - Lines 6 - 8: We tell Puppet to ensure that the package are installed. Puppet expands the array and essentially
 does a for-each, installing each package in the array.
 
->**Note:** We can't use the Puppet `package` target to install Java since this will only install Java 7. That's
+>We can't use the Puppet `package` target to install Java since this will only install Java 7. That's
 why we needed to add the PPA using the `apt` module.
 
 Press `cntrl-O`, then `enter` to save the changes to the file without exiting.
@@ -502,7 +502,7 @@ Let's examine this class:
 the `tomcat` service, which triggers a refresh on the service - Puppet will re-apply the state we defined
 for the service (i.e. start it if it is not running)
 
->**Note:** We need to wait after running the `java` command since this service needs to be running before we
+>We need to wait after running the `java` command since this service needs to be running before we
 start Tomcat, otherwise Tomcat grabs the port that the ordering service needs to listen on.
 
 ### 6.6 Complete the mrpapp Resource ###
@@ -553,6 +553,6 @@ Press `cntrl-O`, then `enter` to save the changes to the file without exiting.
 
     ![](<media/19.jpg>)
 
->**Note:** You can see the complete `init.pp` file [here](final/init.pp).
+>You can see the complete `init.pp` file [here](final/init.pp).
 
 In this lab, you learned how to create the Puppet infrastructure and deploy the Parts Unlimited MRP app to the nodes while managing configuration drift.

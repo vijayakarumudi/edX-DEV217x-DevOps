@@ -2,27 +2,27 @@
 
 In this lab, you will learn how to deploy the Parts Unlimited MRP App in an automated fashion onto a local agent on a Linux VM. After this lab, you will have a working, automated build in Visual Studio Team Services that will build, test, and deploy the Parts Unlimited MRP app to a Virtual Machine in Azure.
 
->**Note:** If you would like to trigger continuous deployments using the hosted VSTS agent instead of a local agent, see [this lab](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module4Labs/HOL_Continuous-Deployment).  
+>If you would like to trigger continuous deployments using the hosted VSTS agent instead of a local agent, see [this lab](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module4Labs/HOL_Continuous-Deployment).  
 
 
-###Pre-requisites###
+### Pre-requisites
 
 - Completion of the Continuous Integration with Parts Unlimited MRP HOL
 - An active Azure Subscription
 - An active Visual Studio Team Services Account
 
 
-### Tasks Overview ###
+### Tasks Overview 
 
 In this lab, you will work with one machine which will serve as both the deployment agent and the MRP server.
 
-**Provision the lab:** Provision a VSTS agent and MRP machine (Ubuntu VM) in Azure using an ARM template.
+- **Provision the lab:** Provision a VSTS agent and MRP machine (Ubuntu VM) in Azure using an ARM template.
 
-**Configure the release definition:** Configure a release definition in VSTS that picks up build artifacts and triggers whenever new artifacts are produced. 
+- **Configure the release definition:** Configure a release definition in VSTS that picks up build artifacts and triggers whenever new artifacts are produced. 
 
-**Trigger a build for continuous deployment:** Trigger a build for continuous deployment by making changes to code and automatically deploying the MRP app to the local agent.
+- **Trigger a build for continuous deployment:** Trigger a build for continuous deployment by making changes to code and automatically deploying the MRP app to the local agent.
 
-### Task 1: Provision the Lab ###
+## Task 1: Provision the Lab ###
 
 1. Create the MRP agent pool in Visual Studio Team Services if you do not have one already. Go to the homepage of your VSTS account or the PartsUnlimitedMRP team project and clicking on the gear icon in the upper-right corner of the homepage.
 
@@ -60,10 +60,10 @@ In this lab, you will work with one machine which will serve as both the deploym
 
     ![](<media/public_ip_dns.png>)
 
-    >**Note:** The lab requires several ports to be open, such as SSH ports and the Parts Unlimited MRP app port on the partsmrp machine. 
+    >The lab requires several ports to be open, such as SSH ports and the Parts Unlimited MRP app port on the partsmrp machine. 
 	The ARM template opens these ports on the machine for you.
 
-### Task 2: Create release definition ###
+## Task 2: Create release definition ###
 
 1. At the homepage of the PartsUnlimitedMRP team project in Visual Studio Team Services, click on the **Release** tab in the upper-left corner of the page. Then, click the **+** button on the left and choose **Create new release definition**.
 
@@ -89,7 +89,7 @@ In this lab, you will work with one machine which will serve as both the deploym
 
 	 ![](<media/add_script_path.png>)
  
-### Task 3: Continuous Deployment ###
+## Task 3: Continuous Deployment ###
 
 Now that our release definition is set up, let's test using Continuous Integration and Continuous Deployment. 
 
