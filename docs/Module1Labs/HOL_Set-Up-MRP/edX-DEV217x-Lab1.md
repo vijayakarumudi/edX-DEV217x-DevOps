@@ -13,6 +13,10 @@ In this lab, we will set up the PartsUnlimited MRP VSTS team project as a pre-re
 -   Project Collection Administrator rights to the Visual Studio Team Services account
 	> If you are not a Project Collection Administrator for the Visual Studio Team Services account, follow the instructions at [this link.](https://www.visualstudio.com/en-us/docs/setup-admin/add-administrator-tfs#project-collection). Alternatively, you can follow the steps above to create a new VSTS account. You will, by default, be an administrator of your own account.
 
+- 	Git
+	> If you are running Linux on your local workstation, install git with "sudo apt-get install git". 
+	If you are running Windows, you can install the git client from [http://git-scm.com/download](http://git-scm.com/download).
+	
 ### Tasks Overview: ###
 
 **Set up your Visual Studio Team Services account:** This step helps you download the source code, and then push it to your own Visual Studio Team Services account.
@@ -38,12 +42,13 @@ order to use Team Build for the Continuous Integration HOL.
 
 ![](<media/copy_vsts_repo_url.png>)
 
-**5.** Now that we have the URL for the VSTS repo, we need to authenticate access to  a Visual Studio Team Services personal access token. Follow the steps in this [link](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/use-personal-access-tokens-to-authenticate) 
- to create a personal access token (PAT).
+**5.** Now that we have the URL for the VSTS repo, we need to authenticate access to the Visual Studio Team Services personal access token. Follow the steps in this [link](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/use-personal-access-tokens-to-authenticate) 
+ to create a personal access token (PAT). A PAT is a secure mechanism for controlling access to your VSTS account. (Alternatively, you can also authenticate using your using your username and password.)
 
-**NOTE:** These Personal Access Token (PAT) will be used when interacting with the git repository from the
+> **NOTE:** This Personal Access Token (PAT) will be used when interacting with the git repository from the
 command line. Make sure you copy the token now. Visual Studio Team Services does not store it and you won't be able to see it again. 
 
+> **NOTE:** It is strongly recommended to install the Git Credential Manager (for Linux or Windows) to simplify 
 
 **6.** Clone the **PartsUnlimitedMRP** git repository located in GitHub onto your local machine:
 
@@ -51,16 +56,8 @@ command line. Make sure you copy the token now. Visual Studio Team Services does
 
 ![](<media/clone_mrp.png>)
 
-**NOTE:** If you are running Linux on your local workstation, install git:
-
-    sudo apt-get install git
-	
-**NOTE:** If you are running Windows, you can install the git client from here:
-
-	http://git-scm.com/download
-
 **3.** Add the Clone URL of your Visual Studio Team Services repository as a new remote called **vsts** and push to it
-your Visual Studio Team Services account. While pushing, use any username without the "@" symbol and the PAT that you copied as the password.
+your Visual Studio Team Services account. While pushing, use any username without the "@" symbol and the PAT that you copied as the password. (Alternatively, you can enter your VSTS username and password.)
 
 	cd PartsUnlimitedMRP/
 
