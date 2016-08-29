@@ -3,8 +3,6 @@ HOL 0 - Set up Parts Unlimited MRP
 
 In this lab, we will set up the PartsUnlimited MRP VSTS team project as a pre-requisite for the Continuous Integration lab. 
 
-
-
 ###Pre-requisites:###
 
 -   An active Visual Studio Team Services (VSTS) account
@@ -48,7 +46,7 @@ order to use Team Build for the Continuous Integration HOL.
 > **NOTE:** This Personal Access Token (PAT) will be used when interacting with the git repository from the
 command line. Make sure you copy the token now. Visual Studio Team Services does not store it and you won't be able to see it again. 
 
-> **NOTE:** It is strongly recommended to install the Git Credential Manager (for Linux or Windows) to simplify 
+> **NOTE:** It is strongly recommended to install the [Git Credential Manager for Mac or Linux](https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux) or [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) to simplify authentication when using Git.  
 
 **6.** Clone the **PartsUnlimitedMRP** git repository located in GitHub onto your local machine:
 
