@@ -40,10 +40,12 @@ order to use Team Build for the Continuous Integration HOL.
 
 ![](<media/copy_vsts_repo_url.png>)
 
-**5.** Now that we have the URL for the VSTS repo, we need to authenticate access to the Visual Studio Team Services personal access token. Follow the steps in this [link](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/use-personal-access-tokens-to-authenticate) 
- to create a personal access token (PAT). A PAT is a secure mechanism for controlling access to your VSTS account. (Alternatively, you can also authenticate using your using your username and password.)
+**5. (Optional)** There are a few Git providers that only support Basic Auth. If you are using one of those providers, 
+you will need to set up either alternate credentials in Visual Studio Team Services (VSTS) or use a personal access token (PAT).
+ Of the two, PATs are recommended for tighter security. Follow the steps in this [link](https://www.visualstudio.com/en-us/docs/setup-admin/team-services/use-personal-access-tokens-to-authenticate) 
+ to create a personal access token (PAT). A PAT is a secure mechanism for controlling access to your VSTS account. If you skip this step, and your Git provider supports it, you can simply authenticate to VSTS using your username and password.
 
-> This Personal Access Token (PAT) will be used when interacting with the git repository from the
+> This Personal Access Token (PAT) will be used when interacting with the Git repository from the
 command line. Make sure you copy the token now. Visual Studio Team Services does not store it and you won't be able to see it again. 
 
 > It is strongly recommended to install the [Git Credential Manager for Mac or Linux](https://github.com/Microsoft/Git-Credential-Manager-for-Mac-and-Linux) or [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) to simplify authentication when using Git.  
