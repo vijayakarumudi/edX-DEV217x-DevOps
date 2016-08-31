@@ -2,13 +2,13 @@
 
 In this hands-on lab, you will explore some of the new features and capabilities of Deploying MRP App via Chef Server in Azure. This hands-on lab is designed to point out new features, discuss and describe them, and enable you to understand and explain these features to customers as part of the DevOps Lifecycle. 
 
-###Pre-requisites###
+### Pre-requisites
 
 - Active Azure Subscription
 	> If you do not have an active Azure subscription, you can sign up by following the instructions in _Create a Free Azure Trial Account_ in Lab 1 of the **DEV212x: Intro to DevOps** course found 
 	[here](https://github.com/MicrosoftLearning/edX-DEV212x-Intro-to-DevOps/blob/master/docs/Lab1/edX-DEV212x-Lab1.md#create-a-free-azure-trial-account). 
 
-###Tasks Overview###
+### Tasks Overview
 
 **Provision the Lab:** This step walks you through how to set up the Chef set of machines with an ARM template. 
 
@@ -29,7 +29,7 @@ In this hands-on lab, you will explore some of the new features and capabilities
 		The Chef workstation can run on Linux, Windows, or Mac. For this lab, the Chef Workstation will be on a Windows machine.
 		The MRP app server will be a Linux machine.  This machine will be configured and deployed to by Chef.
 
-    Instead of manually creating the VMs in Azure, we are going to use an Azure Resource Management (ARM) template.
+    Instead of manually creating the VMs in Azure, we are going to use an Azure Resource Management (ARM) template. An ARM template is a way to define an entire environment in Azure as a JSON text file. It can then be (idempotently) deployed to Azure with a simple script. In our case, we can simply click the Deploy to Azure button below and immediately begin the process of deploying and configuring our servers. In many cases, the ARM template will have a corresponding settings file, however, you will be redirected to the Azure site to fill in the required variables for your specific install.
     
 2. Simply click the Deploy to Azure button below and follow the wizard to deploy the two machines. You will need
     to log in to the Azure Portal.
