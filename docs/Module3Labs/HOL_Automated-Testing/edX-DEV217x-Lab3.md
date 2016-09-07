@@ -6,7 +6,6 @@ In this lab, you will learn how to create new JUnit tests to the Parts Unlimited
 
 - An active Visual Studio Team Services account
 - Eclipse ([http://www.eclipse.org/](http://www.eclipse.org/ "http://www.eclipse.org/"))
-- Completion of the [Continuous Integration HOL](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module4Labs/HOL_Continuous-Integration)
 
 
 ### Tasks Overview
@@ -15,7 +14,7 @@ In this lab, you will learn how to create new JUnit tests to the Parts Unlimited
 
 - **Add JUnit tests to the Parts Unlimited MRP App:** In this step, you will add automated unit tests to the Parts Unlimited MRP App and run them locally.
 
-- **Run the automated tests in an automated build:** In this step, you will run the JUnit tests as part of the Continuous Integration Build that was set up in the  Continuous Integration HOL with Parts Unlimited MRP.
+- **Check in the automated tests:** In this step, you will check in the JUnit tests that you created in preparation of running them in builds for the next lab. 
 
 ## Task 1. Set up the development environment
 
@@ -171,9 +170,9 @@ The final result should look something like this:
 
 You should now be able to see that the test in the JUnit Window.
 
-## Task 3. Run the automated tests in an automated build
+## Task 3. Check in the automated tests
 
-Now that we have the automated tests written, and successfully running, it's important we push the new tests to the shared repository. This will allow other team members to benefit from the automated test and give the automated build more verification that our code is working as expected.
+Now that we have the automated tests written and successfully running, it's important we push the new tests to the shared repository. This will allow other team members to benefit from the automated test and give the automated build more verification that our code is working as expected.
 
 **1.** In Eclipse, **switch to the Git perspective** in the top right of the screen.
 
@@ -199,25 +198,15 @@ The Push Results window should pop up after you have successfully pushed:
 
 ![](media/push_results.png)
 
-**5.** Navigate to the **BUILD** hub in your Visual Studio Team Services Team Project, and then click the **Queued** tab. You should see that your continuous integration build was triggered, and is running.
-
-Once the build is done, **open up the build summary page** by double-clicking on it. 
-
-**7.** On the build summary page, note that 54 tests have run successfully. Click on the **Tests** tab to view the list of automated tests.
-
-![](media/build_test_summary.png)
-
-**8.** In the **Tests** tab, select the **Passed** outcome in the dropdown area, and you should now see that your new automated test is a part of the Continuous Integration Build.
-
-![](media/build_test_results.png)
+Now that the tests have been added, we will be able to notice that they run successfully with the other tests when we run them as part of the automated builds in the next lab, Continuous Integration.
 
 Next steps
 ----------
 
-In this lab, you set up your development environment to work with Gradle, you added a new JUnit test to the Parts Unlimited MRP App, and you were able to see that reflected in the automated build process.
+In this lab, you set up your development environment to work with Gradle, you added a new JUnit test to the Parts Unlimited MRP App, and you were able to check in the automated tests so that they will be run as part of the Continuous Integration build. 
+
+-   [Parts Unlimited MRP Continuous Integration](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module4Labs/HOL_Continuous-Integration)
 
 -   [Parts Unlimited MRP Continuous Deployment](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module4Labs/HOL_Continuous-Deployment)
-
--   [Parts Unlimited MRP Continuous Deployment with Custom Agent](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module4Labs/HOL_Continuous-Deployment-Using-Custom-Agent)
 
 -   [HOL Parts Unlimited MRP Application Performance Monitoring](https://github.com/MicrosoftLearning/edX-DEV217x-DevOps/tree/master/docs/Module5Labs/HOL_Application-Performance-Monitoring)
